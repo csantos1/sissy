@@ -51,13 +51,6 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
-			
-			<script>
-				jQuery('#responsive-menu-button').sidr({
-					name : 'sidr-main',
-					source : '#site-navigation'
-				});
-</script>
 
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
