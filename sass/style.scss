@@ -115,6 +115,11 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 --------------------------------------------------------------*/
 @import "layout/flex";
 
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+@import "media-queries";
+
 // Suzy setut ----------------------------------------------
 $total-columns: 12;
 $column-width: 4em;

@@ -556,6 +556,10 @@ a:hover, a:active {
   display: block;
 }
 
+#mobile-header {
+  display: none;
+}
+
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none;
@@ -866,6 +870,14 @@ object {
   flex: 1;
 }
 
+/*--------------------------------------------------------------
+# Media Queries
+--------------------------------------------------------------*/
+@media only screen and (max-width: 767px) {
+  #mobile-header {
+    display: block;
+  }
+}
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
   -khtml-box-sizing: border-box;
