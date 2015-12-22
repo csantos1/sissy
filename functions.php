@@ -115,6 +115,12 @@ add_action( 'widgets_init', 'sissy_widgets_init' );
  */
 function sissy_scripts() {
 	wp_enqueue_style( 'sissy-style', get_stylesheet_uri() );
+    
+    wp_enqueue_style( 'sidr-style', get_template_directory_uri() . '/js/sidr-package-1.2.1/stylesheets/jquery.sidr.dark.css' );
+    
+    wp_enqueue_script( 'sidr_js', get_template_directory_uri() . '/js/sidr-package-1.2.1/jquery.sidr.min.js', array('jquery'), '', true );
+    
+    wp_enqueue_script( 'jquery_init', get_template_directory_uri() . '/js/jquery.init.js', array('jquery'), '', true );
 
 	wp_enqueue_script( 'sissy-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 

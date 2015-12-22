@@ -1,0 +1,8 @@
+jQuery(document).ready(function($) {
+
+	$('#responsive-menu-button').sidr({
+		name: 'sidr-main',
+		source: '#site-navigation'
+	});
+
+});
