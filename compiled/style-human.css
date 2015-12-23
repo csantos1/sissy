@@ -560,13 +560,26 @@ a:hover, a:active {
   display: none;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
 
   .main-navigation ul {
     display: block;
+    background-color: #3C3C3C;
+    background-image: -webkit-gradient(linear, left top, left bottom, left, right);
+    background-image: -webkit-linear-gradient(top, #3C3C3C, #999999);
+    background-image: -moz-linear-gradient(top, #3C3C3C, #999999);
+    background-image: -ms-linear-gradient(top, #3C3C3C, #999999);
+    background-image: -o-linear-gradient(top, #3C3C3C, #999999);
+    background-image: linear-gradient(top, #3C3C3C, #999999);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3C3C3C', endColorStr='#999999');
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    width: 100%;
   }
 }
 .site-main .comment-navigation, .site-main
@@ -841,35 +854,36 @@ object {
 /*--------------------------------------------------------------
 # Layout/Flex
 --------------------------------------------------------------*/
-.site-content {
-  display: flex;
-}
+@media only screen and (min-width: 768px) {
+  .site-content {
+    display: flex;
+  }
 
-.content-area {
-  flex: 2;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 23.72881%;
-  float: left;
-  margin-right: 1.69492%;
-  -webkit-border-radius: 20px;
-  -khtml-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-  border-radius: 20px;
-}
-.content-area:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
+  .content-area {
+    flex: 2;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    -webkit-border-radius: 20px;
+    -khtml-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+  }
+  .content-area:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 
-.site-content .widget-area {
-  flex: 1;
+  .site-content .widget-area {
+    flex: 1;
+  }
 }
-
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/

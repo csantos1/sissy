@@ -1,12 +1,14 @@
-.site-content {
-  display: flex;
-}
-.content-area {
-  flex: 2;
-  @include container;
-  @include span(3 of 12);
-  @include border-radius(20px);
-}
-.site-content .widget-area {
-  flex: 1;
+@media only screen and (min-width: 768px) {
+  .site-content {
+    display: flex;
+  }
+  .content-area {
+    flex: 2;
+    @include container;
+    @include span(3 of 12);
+    @include border-radius(20px);
+  }
+  .site-content .widget-area {
+    flex: 1;
+  }
 }

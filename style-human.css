@@ -560,13 +560,21 @@ a:hover, a:active {
   display: none;
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
 
   .main-navigation ul {
     display: block;
+    background-color: #3C3C3C;
+    background-image: linear-gradient(top, #3C3C3C, #999999);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#3C3C3C', endColorStr='#999999');
+    content: "";
+    display: table;
+    table-layout: fixed;
+    clear: both;
+    width: 100%;
   }
 }
 .site-main .comment-navigation, .site-main
@@ -841,36 +849,37 @@ object {
 /*--------------------------------------------------------------
 # Layout/Flex
 --------------------------------------------------------------*/
-.site-content {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
+@media only screen and (min-width: 768px) {
+  .site-content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
 
-.content-area {
-  -webkit-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  width: 23.72881%;
-  float: left;
-  margin-right: 1.69492%;
-  border-radius: 20px;
-}
-.content-area:after {
-  content: " ";
-  display: block;
-  clear: both;
-}
+  .content-area {
+    -webkit-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 23.72881%;
+    float: left;
+    margin-right: 1.69492%;
+    border-radius: 20px;
+  }
+  .content-area:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
 
-.site-content .widget-area {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  .site-content .widget-area {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
-
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
