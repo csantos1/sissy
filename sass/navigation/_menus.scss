@@ -31,7 +31,8 @@
 			}
 
 			a {
-				width: 200px;
+				width: auto;
+				white-space: nowrap !important;
 			}
 
 			:hover > a,
@@ -59,6 +60,8 @@
 	a {
 		display: block;
 		text-decoration: none;
+		padding: 5px 10px;
+		color: lighten($lightgray, 30);
 	}
 
 	.current_page_item > a,
