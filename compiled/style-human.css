@@ -697,6 +697,11 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
+.widget-area ul, .widget-area li {
+  margin: 0;
+  padding: 0 0 .2em 1em;
+}
+
 .widget {
   margin: 0 0 1.5em;
   /* Make sure select elements fit in widgets. */
@@ -708,6 +713,40 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.content-area {
+  float: left;
+  margin: 0 -25% 0 0;
+  width: 100%;
+}
+
+.site-main {
+  margin: 0 25% 0 0;
+}
+
+.site-content .widget-area {
+  float: right;
+  overflow: hidden;
+  width: 25%;
+}
+
+.site-footer {
+  clear: both;
+  width: 100%;
+}
+
+/*@media only screen and (min-width: 768px) {
+  .site-content {
+    @include container;
+    @include span(8 of 12);
+  }
+  .content-area {
+    @include container;
+    @include span(last 4 of 12 ltr);
+  }
+  .site-content .widget-area {
+    flex: 1;
+  }
+}*/
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -858,42 +897,42 @@ object {
 /*--------------------------------------------------------------
 # Layout/Flex
 --------------------------------------------------------------*/
-@media only screen and (min-width: 768px) {
-  .site-content {
-    display: flex;
-  }
-
-  .content-area {
-    flex: 2;
-    max-width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 23.72881%;
-    float: left;
-    margin-right: 1.69492%;
-    -webkit-border-radius: 20px;
-    -khtml-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-    border-radius: 20px;
-  }
-  .content-area:after {
-    content: " ";
-    display: block;
-    clear: both;
-  }
-
-  .site-content .widget-area {
-    flex: 1;
-  }
-}
 /*--------------------------------------------------------------
 # Media Queries
 --------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {
   #mobile-header {
     display: block;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .layout-container {
+    width: 750px;
+    margin: 0 auto;
+  }
+
+  .widget-area {
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .layout-container {
+    width: 970px;
+    margin: 0 auto;
+  }
+
+  .widget-area {
+    padding-left: 20px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .layout-container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+
+  .widget-area {
+    padding-left: 20px;
   }
 }
 *, *:before, *:after {

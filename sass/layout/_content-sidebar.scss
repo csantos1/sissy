@@ -18,3 +18,17 @@
 	clear: both;
 	width: $size__site-main;
 }
+
+/*@media only screen and (min-width: 768px) {
+  .site-content {
+    @include container;
+    @include span(8 of 12);
+  }
+  .content-area {
+    @include container;
+    @include span(last 4 of 12 ltr);
+  }
+  .site-content .widget-area {
+    flex: 1;
+  }
+}*/

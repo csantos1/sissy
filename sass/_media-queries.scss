@@ -3,3 +3,33 @@
         display: block;
     }
 }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .layout-container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  .widget-area {
+  padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .layout-container {
+    width: 970px;
+    margin: 0 auto;
+  }
+  .widget-area {
+  padding-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .layout-container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+  .widget-area {
+  padding-left: 20px;
+  }
+}
