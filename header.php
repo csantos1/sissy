@@ -25,6 +25,12 @@
 
 	<header id="masthead" class="site-header" role="banner">
 		<div class="site-branding layout-container">
+        
+        <div id="mobile-header">
+            <a id="responsive-menu-button" href="#sidr-main"><i class="fa fa-bars"><span class="screen-reader-text"><?php esc_html_e('Open Menu', 'sissy'); ?></span></i>
+</a>
+        </div>
+        
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
 				<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
@@ -43,10 +49,6 @@
             endif;
  ?>
 		</div><!-- .site-branding -->
-		
-		<div id="mobile-header">
-            <a id="responsive-menu-button" href="#sidr-main">Menu</a>
-        </div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			

@@ -3,6 +3,7 @@
 	display: block;
 	float: left;
 	width: 100%;
+	background: $darkergray;
 
 	ul {
 		display: none;
@@ -88,10 +89,7 @@
 	}
 	.main-navigation ul {
 		display: block;
-		@include background-gradient(#3C3C3C, #999999);
-		@include clearfix();
-		@include clearfix-after();
-		width: 100%;
+		background: $darkergray;
 	}
 }
 
