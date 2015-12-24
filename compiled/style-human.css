@@ -702,40 +702,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
-.content-area {
-  float: left;
-  margin: 0 -25% 0 0;
-  width: 100%;
-}
-
-.site-main {
-  margin: 0 25% 0 0;
-}
-
-.site-content .widget-area {
-  float: right;
-  overflow: hidden;
-  width: 25%;
-}
-
-.site-footer {
-  clear: both;
-  width: 100%;
-}
-
-/*@media only screen and (min-width: 768px) {
-  .site-content {
-    @include container;
-    @include span(8 of 12);
-  }
-  .content-area {
-    @include container;
-    @include span(last 4 of 12 ltr);
-  }
-  .site-content .widget-area {
-    flex: 1;
-  }
-}*/
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -891,12 +857,49 @@ object {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {
   #mobile-header {
+    display: block;
+  }
+  #mobile-header a {
     display: inline-block;
     float: right;
     margin-right: 15px;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
+  .content-area {
+    float: left;
+    margin: 0 -25% 0 0;
+    width: 100%;
+  }
+
+  .site-main {
+    margin: 0 25% 0 0;
+  }
+
+  .site-content .widget-area {
+    float: right;
+    overflow: hidden;
+    width: 25%;
+  }
+
+  .site-footer {
+    clear: both;
+    width: 100%;
+  }
+
+  /*@media only screen and (min-width: 768px) {
+    .site-content {
+      @include container;
+      @include span(8 of 12);
+    }
+    .content-area {
+      @include container;
+      @include span(last 4 of 12 ltr);
+    }
+    .site-content .widget-area {
+      flex: 1;
+    }
+  }*/
   .layout-container {
     width: 750px;
     margin: 0 auto;
@@ -907,6 +910,40 @@ object {
   }
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .content-area {
+    float: left;
+    margin: 0 -25% 0 0;
+    width: 100%;
+  }
+
+  .site-main {
+    margin: 0 25% 0 0;
+  }
+
+  .site-content .widget-area {
+    float: right;
+    overflow: hidden;
+    width: 25%;
+  }
+
+  .site-footer {
+    clear: both;
+    width: 100%;
+  }
+
+  /*@media only screen and (min-width: 768px) {
+    .site-content {
+      @include container;
+      @include span(8 of 12);
+    }
+    .content-area {
+      @include container;
+      @include span(last 4 of 12 ltr);
+    }
+    .site-content .widget-area {
+      flex: 1;
+    }
+  }*/
   .layout-container {
     width: 970px;
     margin: 0 auto;
@@ -917,6 +954,40 @@ object {
   }
 }
 @media only screen and (min-width: 1200px) {
+  .content-area {
+    float: left;
+    margin: 0 -25% 0 0;
+    width: 100%;
+  }
+
+  .site-main {
+    margin: 0 25% 0 0;
+  }
+
+  .site-content .widget-area {
+    float: right;
+    overflow: hidden;
+    width: 25%;
+  }
+
+  .site-footer {
+    clear: both;
+    width: 100%;
+  }
+
+  /*@media only screen and (min-width: 768px) {
+    .site-content {
+      @include container;
+      @include span(8 of 12);
+    }
+    .content-area {
+      @include container;
+      @include span(last 4 of 12 ltr);
+    }
+    .site-content .widget-area {
+      flex: 1;
+    }
+  }*/
   .layout-container {
     width: 1170px;
     margin: 0 auto;
