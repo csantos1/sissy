@@ -56,6 +56,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   more info: http://www.findmebyip.com/litmus/#css3-properties
 
 ------------------------------------------------------------- */
+@font-face {
+  font-family: 'seganlight';
+  src: url("fonts/segan-light-webfont.eot");
+  src: url("fonts/segan-light-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/segan-light-webfont.woff2") format("woff2"), url("fonts/segan-light-webfont.woff") format("woff"), url("fonts/segan-light-webfont.ttf") format("truetype"), url("fonts/segan-light-webfont.svg#seganlight") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -284,7 +291,7 @@ input,
 select,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "seganlight", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -361,11 +368,22 @@ body {
   /* Fallback for when there is no custom background color defined. */
 }
 
+.site-description {
+  margin-bottom: 10px;
+}
+
 blockquote, q {
   quotes: "" "";
 }
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Kotta One", serif;
+  font-weight: normal;
+  color: #475B62;
+  text-shadow: #FCF4DC 1px 1px 2px 5px rgba(0, 0, 0, 0.4);
 }
 
 hr {
@@ -856,6 +874,10 @@ object {
 # Media Queries
 --------------------------------------------------------------*/
 @media only screen and (max-width: 767px) {
+  .layout-container {
+    padding: 0 15px;
+  }
+
   #mobile-header {
     display: block;
   }

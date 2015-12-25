@@ -81,6 +81,29 @@ endif;
 add_action( 'after_setup_theme', 'sissy_setup' );
 
 /**
+* adds support for custom logo
+*/
+function sissy_theme_customizer( $wp_customize ) {
+    
+$wp_customize->add_section( 'sissy_logo_section' , array(
+    'title'       => __( 'Logo', 'sissy' ),
+    'priority'    => 30,
+    'description' => 'Upload a logo to replace the default site name and description in the header',
+) );
+
+$wp_customize->add_setting( 'sissy_logo' );
+
+$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'sissy_logo', array(
+    'label'    => __( 'Logo', 'sissy' ),
+    'section'  => 'sissy_logo_section',
+    'settings' => 'sissy_logo',
+) ) );
+}
+
+add_action( 'customize_register', 'sissy_theme_customizer' );
+
+
+/**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
  * Priority 0 to make it available to lower priority callbacks.
@@ -117,6 +140,8 @@ function sissy_scripts() {
 	wp_enqueue_style( 'sissy-style', get_stylesheet_uri() );
     
     wp_enqueue_style( 'sidr-style', get_template_directory_uri() . '/js/sidr-package-1.2.1/stylesheets/jquery.sidr.dark.css' );
+    
+    wp_enqueue_style( 'kotta_one', 'https://fonts.googleapis.com/css?family=Kotta+One' );
     
     wp_enqueue_style( 'font_awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' );
     

@@ -12,6 +12,10 @@ body {
 	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
 }
 
+.site-description {
+  margin-bottom: 10px;
+}
+
 blockquote, q {
 	quotes: "" "";
 
@@ -19,6 +23,13 @@ blockquote, q {
 	&:after {
 		content: "";
 	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-secondary;
+  font-weight: normal;
+  color: $darkgray;
+  @include text-shadow($paleryellow 1px 1px);
 }
 
 hr {

@@ -1,4 +1,18 @@
-$font__main: sans-serif;
+@font-face {
+    font-family: 'seganlight';
+    src: url('fonts/segan-light-webfont.eot');
+    src: url('fonts/segan-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/segan-light-webfont.woff2') format('woff2'),
+         url('fonts/segan-light-webfont.woff') format('woff'),
+         url('fonts/segan-light-webfont.ttf') format('truetype'),
+         url('fonts/segan-light-webfont.svg#seganlight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+$font__main: 'seganlight', sans-serif;
+$font-secondary: 'Kotta One', serif;
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;

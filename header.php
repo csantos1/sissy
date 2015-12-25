@@ -27,20 +27,22 @@
 		<div class="site-branding layout-container">
         
 			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></h1>
+			if ( get_theme_mod( 'sissy_logo' ) ) : ?>
+				<div class='site-logo'>
+                    <a href='<?php echo esc_url( home_url( '/' ) ); ?>' title='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>' rel='home'><img src='<?php echo esc_url( get_theme_mod( 'sissy_logo' ) ); ?>' alt='<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>'></a>
+                </div>
 			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><?php bloginfo('name'); ?></a></p>
-			<?php
-            endif;
-
+				<div class='site-logo'><a href="<?php echo esc_url(home_url('/')); ?>" rel="home"><img src="<?php bloginfo('template_url'); ?>/images/logo.png" /></a></div>
+            <?php
             $description = get_bloginfo( 'description', 'display' );
             if ( $description || is_customize_preview() ) :
  ?>
-				<p class="site-description"><?php echo $description;
+                <div class="site-description"><?php echo $description;
     /* WPCS: xss ok. */
- ?></p>
+ ?></div>
 			<?php
+            endif;
+			
             endif;
  ?>
 		</div><!-- .site-branding -->
@@ -52,7 +54,7 @@
 </a>
         </div>
 			
-			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu')); ?>
+			<?php wp_nav_menu(array('theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container' => 'div', 'container_class' => 'layout-container')); ?>
 
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
