@@ -4,6 +4,7 @@
 	float: left;
 	width: 100%;
 	background: $darkergray;
+	font-size: 1.2rem;
 
 	ul {
 		display: none;
@@ -19,6 +20,18 @@
 			left: -999em;
 			z-index: 99999;
 			width: auto;
+			
+			li{
+			  width: 100%;
+			  border-top: 1px solid #4d4d4d;
+        border-bottom: 1px solid #1a1a1a;
+        &:first-child {
+          border-top: none;
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+			}
 
 			ul {
 				left: -999em;
@@ -39,6 +52,7 @@
 
 			:hover > a,
 			.focus > a {
+			  color: #fff;
 			}
 
 			a:hover,
@@ -55,8 +69,10 @@
 		float: left;
 		position: relative;
 
+		&.current-menu-item > a,
 		&:hover > a,
 		&.focus > a {
+		  color: #fff;
 		}
 	}
 	a {
@@ -64,6 +80,9 @@
 		text-decoration: none;
 		padding: 5px 10px;
 		color: lighten($lightgray, 30);
+		&:hover, &:focus {
+		  color: #fff;
+		}
 	}
 
 	.current_page_item > a,

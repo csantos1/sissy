@@ -1,3 +1,7 @@
 h1, h2, h3, h4, h5, h6 {
 	clear: both;
+	font-family: $font-secondary;
+  font-weight: normal;
+  color: $darkgray;
+  @include text-shadow($paleryellow 1px 1px);
 }

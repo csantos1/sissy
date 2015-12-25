@@ -25,13 +25,6 @@ blockquote, q {
 	}
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-secondary;
-  font-weight: normal;
-  color: $darkgray;
-  @include text-shadow($paleryellow 1px 1px);
-}
-
 hr {
 	background-color: $color__background-hr;
 	border: 0;
